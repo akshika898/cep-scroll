@@ -1,0 +1,164 @@
+body {
+    height: 100%;
+    margin: 0;
+}
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+}
+.scroll-container {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.frame-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: top 500ms ease-in-out, left 500ms ease-in-out;
+}
+
+.frame {
+    height: 100%;
+    overflow: auto;
+}
+
+[direction="horizontal"] > .frame-container {
+    white-space: nowrap;
+    left: 0;
+}
+
+[direction="horizontal"] > .frame-container > .frame {
+    display: inline-block;
+    width: 100%;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+
+
+
+.HomeHeader {
+    overflow-x: hidden;
+    padding-top: 8rem;
+    padding-bottom: 4rem
+}
+
+@media(min-width:768px) {
+    .HomeHeader {
+        padding-top: 12rem;
+        padding-bottom: 8rem
+    }
+}
+
+@media(min-width:1300px) {
+    .HomeHeader {
+        padding-top: 16rem;
+        padding-bottom: 12rem
+    }
+}
+
+.HomeHeader-aside {
+    margin-top: 1rem
+}
+
+@media(min-width:768px) {
+    .HomeHeader-aside {
+        margin-top: 1.5rem
+    }
+}
+
+.HomeHeader-title {
+    margin: 0;
+    opacity: 0;
+    max-width: 18rem
+}
+
+.HomeHeader-title>div {
+    position: relative;
+    white-space: nowrap
+}
+
+.HomeHeader-title>div>div {
+    position: relative;
+    z-index: 3;
+    opacity: 0
+}
+
+.HomeHeader-title>div>span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block
+}
+
+.HomeHeader-title>div>span span {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #171717
+}
+
+.HomeHeader-title>div>span:first-child {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%)
+}
+
+.HomeHeader-title>div>span:last-child {
+    left: -8px
+}
+
+.HomeHeader-title>div>span {
+    color: rgba(255, 255, 255, .1)
+}
+
+.HomeHeader-title>div>div {
+    color: #fff
+}
+
+@media(min-width:370px) {
+    .HomeHeader-title {
+        max-width: 22rem
+    }
+    .HomeHeader-title br {
+        display: none
+    }
+}
+
+@media(min-width:768px) {
+    .HomeHeader-title {
+        width: 32rem;
+        max-width: none
+    }
+}
+
+@media(min-width:992px) {
+    .HomeHeader-title {
+        width: 37rem
+    }
+}
+
+@media(min-width:1600px) {
+    .HomeHeader-title {
+        width: 40rem
+    }
+}
+
+.HomeHeader span {
+    display: inline-block
+}
+
+.HomeHeader span span {
+    display: inline
+}
+
+.Background--dark .text-muted, .Background--darker .text-muted, .Background--black .text-muted {
+    color: #595959!important
+}
